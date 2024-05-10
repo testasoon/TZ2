@@ -1,5 +1,5 @@
 import static org.junit.Assert.assertEquals;
-import statioc org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class FunctionsTest
