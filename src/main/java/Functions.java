@@ -18,9 +18,9 @@ public class Functions
 	private void init(String filename) throws Exception {
 	    
 	    File file = new File(filename);
-        if (!file.isFile()) {
-            throw new Exception("File doesn't exist!");
-        }
+        // if (!file.isFile()) {
+        //     throw new Exception("File doesn't exist!");
+        // }
         
         Scanner scanner = new Scanner(file);
         
@@ -45,6 +45,7 @@ public class Functions
         return _min;
         
     }
+    
     public int _sum() throws Exception{
         long _sum = 0;
         for (int i = 0; i < size; ++i) {
