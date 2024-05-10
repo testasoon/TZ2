@@ -15,19 +15,4 @@
      <target name="clean">
          <delete dir="${build}"/>
      </target>
-     <target name="package" depends="compile">
-        <jar destfile="${build}/${ant.project.name}.jar" basedir="${classes}">
-            <manifest>
-                <attribute name="Main–Class" value="${ant.project.name}"/>
-            </manifest>
-        </jar>
-    </target>
-     <target name="test" depends="compile">
-        <junit>
-            <classpath>
-                <pathelement location="${classes}"/>
-            </classpath>
-            <test name="FunctionsHello"/>
-        </junit>
-    </target>
  </project>
