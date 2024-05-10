@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
 <project name="Functions" default="run">
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac destdir="build/classes" includeantruntime="false">
+            <src path="src"/>
+        </javac>
+    </target>
     <target name="run" depends="compile">
         <junit>
             <classpath>
@@ -7,5 +13,8 @@
             </classpath>
             <test name="FunctionsTest"/>
         </junit>
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
     </target>
 </project>
