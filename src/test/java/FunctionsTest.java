@@ -6,7 +6,7 @@ public class FunctionsTest
     @Test
     public void unit_tests() {
         String[] arguments = new String[]{"test_01.txt"};
-        String[] arguments = new String[]{"test_02.txt"};
+        String[] arguments2 = new String[]{"test_02.txt"};
         
         Functions obj = new Functions(arguments);
         Functions obj2 = new Functions(arguments2);
