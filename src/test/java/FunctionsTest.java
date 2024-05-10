@@ -10,6 +10,7 @@ public class FunctionsTest
         
         Functions obj = new Functions(arguments);
         Functions obj2 = new Functions(arguments2);
+        
         try {
             assertEquals(obj._min(), 1);
             assertEquals(obj._max(), 8494);
@@ -21,6 +22,35 @@ public class FunctionsTest
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    @Test
+    public void speed_test() {
+        String[] arguments = new String[]{"test_01.txt"};
+        String[] arguments = new String[]{"test_03.txt"};
+        
+        Functions obj = new Functions(arguments);
+        Functions obj = new Functions(arguments2);
+        long start_point = System.currentTimeMillis();
+        for (int i = 0; i < 1000; ++i) {
+            assertEquals(obj._min(), 1);
+        }
+        long inter_point = System.currentTimeMillis();
+        for (int i = 0; i < 1000; ++i) {
+            assertEquals(obj2.min(), 1);
+        }
+        long end_point = System.currentTimeMillis();
+        
+        assertTrue(inter_point - start_point < end_point - inter_point);
+    }
+    
+    @Test 
+    public void another_test() {
+        String[] arguments = new String[]{"test_04.txt"};
+        
+        Functions obj = new Functions(arguments);
+        
+        assertEquals(obj2._min() + obj2._max(), obj2._sum());
     }
 }
 
