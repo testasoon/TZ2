@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import statioc org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class FunctionsTest
@@ -37,7 +38,7 @@ public class FunctionsTest
         }
         long inter_point = System.currentTimeMillis();
         for (int i = 0; i < 1000; ++i) {
-            assertEquals(obj2.min(), 1);
+            assertEquals(obj2._min(), 1);
         }
         long end_point = System.currentTimeMillis();
         
