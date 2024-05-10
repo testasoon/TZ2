@@ -7,7 +7,7 @@ public class Functions
     private static int[] arr;
     private static int size;
     
-	public static void main(String[] args) {
+	Functions(String[] args) {
         try {
             init(args[0]);
         } catch (Exception e) {
