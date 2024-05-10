@@ -9,8 +9,7 @@ public class Functions
     
 	public static void main(String[] args) {
         try {
-            init(args[1]);
-            System.out.print(get_function(args[0]));
+            init(args[0]);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -33,35 +32,20 @@ public class Functions
         }
 	}
 	
-	private static int get_function(String funcname) throws Exception {
-	    switch (funcname) {
-            case ("min"):
-                return _min();
-            case ("max"):
-                return _max();
-            case ("sum"):
-                return _sum();
-            case ("mult"):
-                return _mult();
-            default:
-                throw new Exception("Incorrect function's name!");
-        }
-	}
-	
-	private static int _max() {
+	private int _max() {
 	    int _max = arr[0];
 	    for (int i = 1; i < size; ++i) _max = Math.max(_max, arr[i]);
 	    return _max;
 	}
 	
-    private static int _min() {
+    private int _min() {
         int _min = arr[0];
 	    for (int i = 1; i < size; ++i) 
 	        _min = Math.min(_min, arr[i]);
         return _min;
         
     }
-    private static int _sum() throws Exception{
+    private int _sum() throws Exception{
         long _sum = 0;
         for (int i = 0; i < size; ++i) {
             _sum += arr[i];
@@ -70,7 +54,7 @@ public class Functions
         return (int)_sum;
     }
     
-    private static int _mult() throws Exception{
+    private int _mult() throws Exception{
         long _mult = 1;
         for (int i = 0; i < size; ++i) {
             _mult *= arr[i];
