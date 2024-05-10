@@ -32,20 +32,20 @@ public class Functions
         }
 	}
 	
-	private int _max() {
+	public int _max() {
 	    int _max = arr[0];
 	    for (int i = 1; i < size; ++i) _max = Math.max(_max, arr[i]);
 	    return _max;
 	}
 	
-    private int _min() {
+    public int _min() {
         int _min = arr[0];
 	    for (int i = 1; i < size; ++i) 
 	        _min = Math.min(_min, arr[i]);
         return _min;
         
     }
-    private int _sum() throws Exception{
+    public int _sum() throws Exception{
         long _sum = 0;
         for (int i = 0; i < size; ++i) {
             _sum += arr[i];
@@ -54,7 +54,7 @@ public class Functions
         return (int)_sum;
     }
     
-    private int _mult() throws Exception{
+    public int _mult() throws Exception{
         long _mult = 1;
         for (int i = 0; i < size; ++i) {
             _mult *= arr[i];
