@@ -51,7 +51,7 @@ public class FunctionsTest
         
         Functions obj = new Functions(arguments);
         
-        assertEquals(obj._min() + obj._max(), obj._sum());
+        assertEquals(obj._min(), obj._max());
     }
 }
 
