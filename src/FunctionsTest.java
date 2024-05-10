@@ -6,7 +6,6 @@ public class FunctionsTest
     @Test
     public void check() {
         String[] arguments = new String[]{"tests/test_01.txt"};
-        arguments[0] = filename;
 
         Functions obj = new Functions(arguments);
         
