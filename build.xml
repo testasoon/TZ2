@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project name="Functions" default="run">
-    <target name="test" depends="compile">
+    <target name="run" depends="compile">
         <junit>
             <classpath>
                 <pathelement location="${classes}"/>
