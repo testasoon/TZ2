@@ -4,8 +4,8 @@ import java.util.*;
 public class Functions
 {
     private static final int ARR_SIZE = 1000000;
-    private static int[] arr;
-    private static int size;
+    private int[] arr;
+    private int size;
     
 	Functions(String[] args) {
         try {
@@ -15,7 +15,7 @@ public class Functions
         }
 	}
 	
-	private static void init(String filename) throws Exception {
+	private void init(String filename) throws Exception {
 	    
 	    File file = new File(filename);
         if (!file.isFile()) {
@@ -32,20 +32,20 @@ public class Functions
         }
 	}
 	
-	public int _max() {
+	private int _max() {
 	    int _max = arr[0];
 	    for (int i = 1; i < size; ++i) _max = Math.max(_max, arr[i]);
 	    return _max;
 	}
 	
-    public int _min() {
+    private int _min() {
         int _min = arr[0];
 	    for (int i = 1; i < size; ++i) 
 	        _min = Math.min(_min, arr[i]);
         return _min;
         
     }
-    public int _sum() throws Exception{
+    private int _sum() throws Exception{
         long _sum = 0;
         for (int i = 0; i < size; ++i) {
             _sum += arr[i];
@@ -54,7 +54,7 @@ public class Functions
         return (int)_sum;
     }
     
-    public int _mult() throws Exception{
+    private int _mult() throws Exception{
         long _mult = 1;
         for (int i = 0; i < size; ++i) {
             _mult *= arr[i];
