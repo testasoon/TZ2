@@ -27,10 +27,10 @@ public class FunctionsTest
     @Test
     public void speed_test() {
         String[] arguments = new String[]{"test_01.txt"};
-        String[] arguments = new String[]{"test_03.txt"};
+        String[] arguments2 = new String[]{"test_03.txt"};
         
         Functions obj = new Functions(arguments);
-        Functions obj = new Functions(arguments2);
+        Functions obj2 = new Functions(arguments2);
         long start_point = System.currentTimeMillis();
         for (int i = 0; i < 1000; ++i) {
             assertEquals(obj._min(), 1);
@@ -50,7 +50,7 @@ public class FunctionsTest
         
         Functions obj = new Functions(arguments);
         
-        assertEquals(obj2._min() + obj2._max(), obj2._sum());
+        assertEquals(obj._min() + obj._max(), obj._sum());
     }
 }
 
